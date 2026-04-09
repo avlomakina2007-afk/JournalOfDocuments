@@ -33,3 +33,4 @@ C:\Users\USER\Desktop\УП, ПП 03.01\JournalOfDocuments\JournalOfDocuments\obj
 C:\Users\USER\Desktop\УП, ПП 03.01\JournalOfDocuments\JournalOfDocuments\obj\Debug\JournalO.CCD5D9BD.Up2Date
 C:\Users\USER\Desktop\УП, ПП 03.01\JournalOfDocuments\JournalOfDocuments\obj\Debug\JournalOfDocuments.exe
 C:\Users\USER\Desktop\УП, ПП 03.01\JournalOfDocuments\JournalOfDocuments\obj\Debug\JournalOfDocuments.pdb
+C:\Users\USER\Desktop\УП, ПП 03.01\JournalOfDocuments\JournalOfDocuments\obj\Debug\JournalOfDocuments.exe.config

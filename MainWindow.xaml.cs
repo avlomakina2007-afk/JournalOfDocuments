@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows;
 using Newtonsoft.Json;
 
+
 namespace JournalOfDocuments
 {
     public partial class MainWindow : Window
@@ -179,6 +180,20 @@ namespace JournalOfDocuments
         {
             ClearForm();
             dgDocuments.SelectedItem = null;
+        }
+        private void btnFilter_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtFilter.Text))
+            {
+                dgDocuments.ItemsSource = _documents;
+            }
+            else
+            {
+                var filtered = new ObservableCollection<Document>(
+                    _documents.Where(d => d.Sender.IndexOf(txtFilter.Text, StringComparison.OrdinalIgnoreCase) >= 0)
+                );
+                dgDocuments.ItemsSource = filtered;
+            }
         }
     }
 }

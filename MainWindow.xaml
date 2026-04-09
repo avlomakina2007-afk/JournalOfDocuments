@@ -7,15 +7,27 @@
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <!-- Заголовок -->
             <RowDefinition Height="Auto"/>
+            <!-- Фильтр -->
+            <RowDefinition Height="*"/>
+            <!-- Таблица -->
+            <RowDefinition Height="Auto"/>
+            <!-- Форма -->
         </Grid.RowDefinitions>
 
         <!-- Заголовок -->
-        <TextBlock Text="Регистрация входящих документов" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+        <TextBlock Grid.Row="0" Text="Регистрация входящих документов" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <!-- Панель фильтра -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,5">
+            <TextBlock Text="Фильтр по отправителю:" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtFilter" Width="150" Margin="5,0"/>
+            <Button x:Name="btnFilter" Content="Применить" Click="btnFilter_Click"/>
+        </StackPanel>
 
         <!-- Таблица документов -->
-        <DataGrid x:Name="dgDocuments" Grid.Row="1" AutoGenerateColumns="False" 
+        <DataGrid x:Name="dgDocuments" Grid.Row="2" AutoGenerateColumns="False" 
                   SelectionMode="Single" SelectionChanged="dgDocuments_SelectionChanged"
                   CanUserAddRows="False" IsReadOnly="False" Margin="0,10">
             <DataGrid.Columns>
@@ -29,7 +41,7 @@
         </DataGrid>
 
         <!-- Форма ввода/редактирования -->
-        <Border Grid.Row="2" BorderBrush="LightGray" BorderThickness="1" Padding="10" Margin="0,10,0,0">
+        <Border Grid.Row="3" BorderBrush="LightGray" BorderThickness="1" Padding="10" Margin="0,10,0,0">
             <StackPanel>
                 <Grid Margin="0,0,0,10">
                     <Grid.ColumnDefinitions>
