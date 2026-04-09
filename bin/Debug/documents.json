@@ -1,0 +1,18 @@
+[
+  {
+    "Id": 1,
+    "IncomingNumber": "01",
+    "DateReceived": "2026-04-03T00:00:00+05:00",
+    "Sender": "ООО Нефтехим",
+    "Subject": "Заявка на материалы",
+    "Executor": "Иванов И.И."
+  },
+  {
+    "Id": 2,
+    "IncomingNumber": "02",
+    "DateReceived": "2026-04-06T00:00:00+05:00",
+    "Sender": "АО Энерго",
+    "Subject": "Акт сверки",
+    "Executor": "Петрова А.С."
+  }
+]
